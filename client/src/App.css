@@ -1,0 +1,83 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fade-in animation for new to-do items */
+@keyframes fadeIN {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.fade-in {
+    animation: fadeIN 0.5s ease-in-out;
+}
+
+/* Fade-out animation for deleted items */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Style for task list container */
+.task-list-container {
+    width: 400px; /* Fixed width or percentage */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Style for each list item */
+.task-list-container .list-group-item {
+    width: 80%; /* Responsive width for each list item */
+    margin: 5px auto; /* Center the items */
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Style for completed task */
+.task-list-container .list-group-item span {
+    color: gray;
+}
+
+/* Style for the task completion circle */
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ccc; /* Default empty circle color */
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.circle.checked {
+    background-color: #28a745;
+}
+
+.circle:hover {
+    background-color: #28a745;
+}
+
+/* Checkmark inside the circle */
+.checkmark {
+    color: white;
+    font-size: 18px;
+}
